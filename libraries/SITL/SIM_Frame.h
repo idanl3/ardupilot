@@ -85,33 +85,33 @@ private:
      */
     const struct Model {
         // model mass kg
-        float mass = 3.0;
+        float mass = 32.5;
 
         // diameter of model
-        float diagonal_size = 0.35;
+        float diagonal_size = 1.325;
 
         /*
           the ref values are for a test at fixed angle, used to estimate drag
          */
-        float refSpd = 15.08; // m/s
-        float refAngle = 45;  // degrees
-        float refVoltage = 12.09; // Volts
-        float refCurrent = 29.3; // Amps
-        float refAlt = 593; // altitude AMSL
+        float refSpd = 25.08; // m/s
+        float refAngle = 30.0;  // degrees
+        float refVoltage = 46.9; // Volts
+        float refCurrent = 65.36; // Amps
+        float refAlt = 26; // altitude AMSL
         float refTempC = 25; // temperature C
-        float refBatRes = 0.01; // BAT.Res
+        float refBatRes = 0.024; // BAT.Res
 
         // full pack voltage
-        float maxVoltage = 4.2*3;
+        float maxVoltage = 50.4;
 
         // battery capacity in Ah. Use zero for unlimited
-        float battCapacityAh = 0.0;
+        float battCapacityAh = 44;
 
         // CTUN.ThO at hover at refAlt
-        float hoverThrOut = 0.39;
+        float hoverThrOut = 0.36;
 
         // MOT_THST_EXPO
-        float propExpo = 0.65;
+        float propExpo = 0.5;
 
         // scaling factor for yaw response, deg/sec
         float refRotRate = 120;
@@ -120,21 +120,21 @@ private:
         // MOT_PWM_MIN
         float pwmMin = 1000;
         // MOT_PWM_MAX
-        float pwmMax = 2000;
+        float pwmMax = 1940;
         // MOT_SPIN_MIN
-        float spin_min = 0.15;
+        float spin_min = 0.2;
         // MOT_SPIN_MAX
-        float spin_max = 0.95;
+        float spin_max = 0.975;
 
         // maximum slew rate of motors
-        float slew_max = 150;
+        float slew_max = 75;
 
         // rotor disc area in m**2 for 4 x 0.35m dia rotors
         // Note that coaxial rotors count as one rotor only when calculating effective disc area
-        float disc_area = 0.385;
+        float disc_area = 1.82;
 
         // momentum drag coefficient
-        float mdrag_coef = 0.2;
+        float mdrag_coef = 0.1;
 
         // if zero value will be estimated from mass
         Vector3f moment_of_inertia;
@@ -145,7 +145,7 @@ private:
         float yaw_factor[12] = {0};
 
         // number of motors
-        float num_motors = 4;
+        float num_motors = 8;
 
     } default_model;
 
