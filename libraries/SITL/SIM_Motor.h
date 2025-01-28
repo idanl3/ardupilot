@@ -51,10 +51,54 @@ public:
         yaw_factor(_yaw_factor), // positive is clockwise
         display_order(_display_order) // order for clockwise display
     {
-        position.x = cosf(radians(angle));
-        position.y =  sinf(radians(angle));
+        if (_display_order==1) {
+        position.x = 1;
+        position.y =  0.38;
         position.z = 0;
+        }
+        
+        if (_display_order==2) {
+        position.x = 0.4;
+        position.y =  0.38;
+        position.z = 0;
+        }
 
+        if (_display_order==3) {
+        position.x = -0.4;
+        position.y =  0.38;
+        position.z = 0;
+        }
+        
+        if (_display_order==4) {
+        position.x = -1;
+        position.y =  0.38;
+        position.z = 0;
+        }        
+
+        if (_display_order==5) {
+        position.x = -1;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+
+        if (_display_order==6) {
+        position.x = -0.4;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+
+        if (_display_order==7) {
+        position.x = 0.4;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+
+        if (_display_order==8) {
+        position.x = 1;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+        
         thrust_vector.x = 0;
         thrust_vector.y = 0;
         thrust_vector.z = -1;
