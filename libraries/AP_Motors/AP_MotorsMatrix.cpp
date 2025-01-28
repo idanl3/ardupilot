@@ -859,13 +859,13 @@ bool AP_MotorsMatrix::setup_octa_matrix(motor_frame_type frame_type)
         _frame_type_string = "PLUS";
         static const AP_MotorsMatrix::MotorDefRaw motors[] {
             {  1.0f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  1 },
-            {  0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  5 },
-            { -0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 2 },
+            { -1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  5 },
+            {  0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 2 },
             { -1.0f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 4 },
-            { -1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 8 },
+            {  1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 8 },
             { -0.4f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 6 },
-            { -0.4f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  7 },
-            {  1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3 },
+            {  0.4f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  7 },
+            { -0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3 },
         };
         add_motors_raw(motors, ARRAY_SIZE(motors));
         break;
@@ -874,13 +874,13 @@ bool AP_MotorsMatrix::setup_octa_matrix(motor_frame_type frame_type)
         _frame_type_string = "X";
         static const AP_MotorsMatrix::MotorDefRaw motors[] {
             {  1.0f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  1 },
-            {  0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  5 },
-            { -0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 2 },
+            { -1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  5 },
+            {  0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 2 },
             { -1.0f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 4 },
-            { -1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 8 },
+            {  1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 8 },
             { -0.4f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 6 },
-            { -0.4f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  7 },
-            {  1.0f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3 },
+            {  0.4f,  -0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  7 },
+            { -0.4f,   0.38f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3 },
         };
         add_motors_raw(motors, ARRAY_SIZE(motors));
         break;
