@@ -857,33 +857,32 @@ bool AP_MotorsMatrix::setup_octa_matrix(motor_frame_type frame_type)
     switch (frame_type) {
     case MOTOR_FRAME_TYPE_PLUS: {
         _frame_type_string = "PLUS";
-        static const AP_MotorsMatrix::MotorDef motors[] {
-            {    20.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   1 },
-            {  -159.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   5 },
-            {   36.9f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  2 },
-            {  159.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  4 },
-            {  -20.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  8 },
-            { -143.2f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  6 },
-            {  -36.9f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   7 },
-            {   143.2f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   3 },
+        static const AP_MotorsMatrix::MotorDefRaw motors[] {
+            { -1.0f,    1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  1 },
+            {  1.0f,   -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  5 },
+            { -1.0f,  0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 2 },
+            { -1.0f,   -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 4 },
+            {  1.0f,    1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 8 },
+            {  1.0f, -0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 6 },
+            {  1.0f,  0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  7 },
+            { -1.0f, -0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3 },
         };
-
-        add_motors(motors, ARRAY_SIZE(motors));
+        add_motors_raw(motors, ARRAY_SIZE(motors));
         break;
     }
     case MOTOR_FRAME_TYPE_X: {
         _frame_type_string = "X";
-        static const AP_MotorsMatrix::MotorDef motors[] {
-            {    20.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   1 },
-            {  -159.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   5 },
-            {   36.9f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  2 },
-            {  159.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  4 },
-            {  -20.5f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  8 },
-            { -143.2f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  6 },
-            {  -36.9f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   7 },
-            {   143.2f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW,   3 },
+        static const AP_MotorsMatrix::MotorDefRaw motors[] {
+            { -1.0f,    1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  1 },
+            {  1.0f,   -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  5 },
+            { -1.0f,  0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 2 },
+            { -1.0f,   -1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 4 },
+            {  1.0f,    1.0f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 8 },
+            {  1.0f, -0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CCW, 6 },
+            {  1.0f,  0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  7 },
+            { -1.0f, -0.333f, AP_MOTORS_MATRIX_YAW_FACTOR_CW,  3 },
         };
-        add_motors(motors, ARRAY_SIZE(motors));
+        add_motors_raw(motors, ARRAY_SIZE(motors));
         break;
     }
     case MOTOR_FRAME_TYPE_V: {
