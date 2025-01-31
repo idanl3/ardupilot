@@ -77,9 +77,57 @@ public:
         pitch_min(_pitch_min),
         pitch_max(_pitch_max)
     {
-        position.x = cosf(radians(angle));
+/*        position.x = cosf(radians(angle));
         position.y =  sinf(radians(angle));
+        position.z = 0; */
+        if (_display_order==1) {
+        position.x = 1;
+        position.y =  0.38;
         position.z = 0;
+        }
+        
+        if (_display_order==2) {
+        position.x = 0.4;
+        position.y =  0.38;
+        position.z = 0;
+        }
+
+        if (_display_order==3) {
+        position.x = -0.4;
+        position.y =  0.38;
+        position.z = 0;
+        }
+        
+        if (_display_order==4) {
+        position.x = -1;
+        position.y =  0.38;
+        position.z = 0;
+        }        
+
+        if (_display_order==5) {
+        position.x = -1;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+
+        if (_display_order==6) {
+        position.x = -0.4;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+
+        if (_display_order==7) {
+        position.x = 0.4;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+
+        if (_display_order==8) {
+        position.x = 1;
+        position.y =  -0.38;
+        position.z = 0;
+        }
+        
 
         thrust_vector.x = 0;
         thrust_vector.y = 0;
